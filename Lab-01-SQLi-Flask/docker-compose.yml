@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  bytemart-backend:
+    build:
+      context: ./backend
+    container_name: lab01-bytemart-backend
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+    networks:
+      - lab01net
+
+  bytemart-frontend:
+    build:
+      context: ./frontend
+    container_name: lab01-bytemart-frontend
+    ports:
+      - "8081:80"
+    depends_on:
+      - bytemart-backend
+    networks:
+      - lab01net
+
+networks:
+  lab01net:
+    driver: bridge

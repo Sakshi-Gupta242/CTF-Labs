@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #1e293b;
+  border-bottom: 2px solid #334155;
+}
+.brand { font-size: 22px; font-weight: bold; color: #38bdf8; }
+nav { display: flex; gap: 8px; }
+.nav-btn {
+  background: transparent;
+  border: 1px solid #475569;
+  color: #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.nav-btn.active, .nav-btn:hover { background: #38bdf8; color: #0f172a; border-color: #38bdf8; }
+
+main { max-width: 960px; margin: 0 auto; padding: 32px; }
+h1 { color: #f8fafc; }
+
+.search-bar { display: flex; gap: 8px; margin-bottom: 24px; }
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-size: 15px;
+}
+.search-bar button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.product-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 16px;
+}
+.product-card h3 { margin: 0 0 8px; color: #38bdf8; }
+.product-card p { margin: 4px 0; color: #94a3b8; font-size: 14px; }
+.product-card .price { color: #4ade80; font-weight: bold; font-size: 16px; }
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 420px;
+}
+.card label { display: block; margin: 12px 0 4px; color: #cbd5e1; }
+.card input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+.card button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message { margin-top: 12px; color: #facc15; }
+.error-box {
+  background: #7f1d1d;
+  border: 1px solid #b91c1c;
+  color: #fecaca;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.output-box {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 16px;
+  border-radius: 6px;
+  color: #4ade80;
+  white-space: pre-wrap;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 13px;
+}

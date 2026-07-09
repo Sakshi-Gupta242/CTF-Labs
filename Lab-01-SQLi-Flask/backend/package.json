@@ -1,0 +1,16 @@
+{
+  "name": "lab-01-sqli-backend",
+  "version": "1.0.0",
+  "description": "CTF Lab 01 - Vulnerable Node.js REST API with SQL Injection (SQLite)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.19.2",
+    "sqlite3": "5.1.7",
+    "cors": "2.8.5",
+    "cookie-parser": "1.4.6",
+    "body-parser": "1.20.2"
+  }
+}
