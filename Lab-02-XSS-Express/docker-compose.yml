@@ -1,0 +1,32 @@
+# docker-compose.yml — Lab 02 Stored XSS
+# Run: docker compose up --build
+version: "3.9"
+
+services:
+  # Express API — stores feedback in memory (no sanitization)
+  lab02-backend:
+    build:
+      context: ./backend
+    container_name: lab02-xss-backend
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+    networks:
+      - lab02net
+
+  # Static frontend — home form + vulnerable admin panel
+  lab02-frontend:
+    build:
+      context: ./frontend
+    container_name: lab02-xss-frontend
+    ports:
+      - "8082:80"
+    depends_on:
+      - lab02-backend
+    networks:
+      - lab02net
+
+networks:
+  lab02net:
+    driver: bridge
